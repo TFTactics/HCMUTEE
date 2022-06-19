@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC34EC03-CB68-4A8F-8CED-E2A6383C582B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD_Layer\DBMain.cs" />
+    <Compile Include="BS_Layer\BLAdmin.cs" />
+    <Compile Include="BS_Layer\BLDanhSachUngTuyen.cs" />
+    <Compile Include="BS_Layer\BLNganhDaoTao.cs" />
+    <Compile Include="BS_Layer\BLHeDaoTao.cs" />
+    <Compile Include="BS_Layer\BLHocPhiHocBong.cs" />
+    <Compile Include="BS_Layer\BLLienHe.cs" />
+    <Compile Include="BS_Layer\BLThongTinNhapHoc.cs" />
+    <Compile Include="BS_Layer\BLPhuongThucXetTuyen.cs" />
+    <Compile Include="BS_Layer\BLChuongTrinhDaoTao.cs" />
+    <Compile Include="BS_Layer\BLThongTinKhoa.cs" />
+    <Compile Include="BS_Layer\BLDanhSachNguoiDung.cs" />
+    <Compile Include="BS_Layer\BLThongTinTruong.cs" />
+    <Compile Include="BS_Layer\BLThongTinVanBan.cs" />
+    <Compile Include="BS_Layer\BLTimeLine.cs" />
+    <Compile Include="BS_Layer\BLBangTinTuyenSinh.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLiTuyenSinh.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiTuyenSinh.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="UCDangKi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDangKi.Designer.cs">
+      <DependentUpon>UCDangKi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCDangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDangNhap.Designer.cs">
+      <DependentUpon>UCDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemPTXT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemPTXT.Designer.cs">
+      <DependentUpon>UCThemPTXT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemTin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemTin.Designer.cs">
+      <DependentUpon>UCThemTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemNguoiDung.Designer.cs">
+      <DependentUpon>UCThemNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemTimeLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemTimeLine.Designer.cs">
+      <DependentUpon>UCThemTimeLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemCTDaoTao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemCTDaoTao.Designer.cs">
+      <DependentUpon>UCThemCTDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemKhoa.Designer.cs">
+      <DependentUpon>UCThemKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemHDaoTao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemHDaoTao.Designer.cs">
+      <DependentUpon>UCThemHDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCNDaoTao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCNDaoTao.Designer.cs">
+      <DependentUpon>UCNDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemTTNhapHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemTTNhapHoc.Designer.cs">
+      <DependentUpon>UCThemTTNhapHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemUngTuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\ViewLayer_Them\UCThemUngTuyen.Designer.cs">
+      <DependentUpon>UCThemUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCCTDaoTao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCCTDaoTao.Designer.cs">
+      <DependentUpon>UCCTDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCDanhSachKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCDanhSachKhoa.Designer.cs">
+      <DependentUpon>UCDanhSachKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\UCDanhSachNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\UCDanhSachNguoiDung.Designer.cs">
+      <DependentUpon>UCDanhSachNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCGioiThieuChung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCGioiThieuChung.Designer.cs">
+      <DependentUpon>UCGioiThieuChung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCHeDaoTao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCHeDaoTao.Designer.cs">
+      <DependentUpon>UCHeDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCHocPhiHocBong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCHocPhiHocBong.Designer.cs">
+      <DependentUpon>UCHocPhiHocBong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\UCHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\UCHome.Designer.cs">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCLienHe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCLienHe.Designer.cs">
+      <DependentUpon>UCLienHe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCNganhDaoTao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCNganhDaoTao.Designer.cs">
+      <DependentUpon>UCNganhDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCPhuongThucTS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCPhuongThucTS.Designer.cs">
+      <DependentUpon>UCPhuongThucTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\UCQLBangTinTuyenSinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\UCQLBangTinTuyenSinh.Designer.cs">
+      <DependentUpon>UCQLBangTinTuyenSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\UCQLThongTinTruong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\UCQLThongTinTruong.Designer.cs">
+      <DependentUpon>UCQLThongTinTruong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\UCQuanLyDanhSachUngTuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\UCQuanLyDanhSachUngTuyen.Designer.cs">
+      <DependentUpon>UCQuanLyDanhSachUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCThongTinNhapHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\View_Layer_QLTTTruong\UCThongTinNhapHoc.Designer.cs">
+      <DependentUpon>UCThongTinNhapHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Layer\UCTimeLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Layer\UCTimeLine.Designer.cs">
+      <DependentUpon>UCTimeLine.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDangKi.resx">
+      <DependentUpon>UCDangKi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDangNhap.resx">
+      <DependentUpon>UCDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\ViewLayer_Them\UCThemPTXT.resx">
+      <DependentUpon>UCThemPTXT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\ViewLayer_Them\UCThemTin.resx">
+      <DependentUpon>UCThemTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\ViewLayer_Them\UCThemNguoiDung.resx">
+      <DependentUpon>UCThemNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\ViewLayer_Them\UCThemTimeLine.resx">
+      <DependentUpon>UCThemTimeLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\ViewLayer_Them\UCThemCTDaoTao.resx">
+      <DependentUpon>UCThemCTDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\ViewLayer_Them\UCThemKhoa.resx">
+      <DependentUpon>UCThemKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\ViewLayer_Them\UCThemHDaoTao.resx">
+      <DependentUpon>UCThemHDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\ViewLayer_Them\UCNDaoTao.resx">
+      <DependentUpon>UCNDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\ViewLayer_Them\UCThemTTNhapHoc.resx">
+      <DependentUpon>UCThemTTNhapHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\ViewLayer_Them\UCThemUngTuyen.resx">
+      <DependentUpon>UCThemUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\View_Layer_QLTTTruong\UCCTDaoTao.resx">
+      <DependentUpon>UCCTDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\View_Layer_QLTTTruong\UCDanhSachKhoa.resx">
+      <DependentUpon>UCDanhSachKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\UCDanhSachNguoiDung.resx">
+      <DependentUpon>UCDanhSachNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\View_Layer_QLTTTruong\UCGioiThieuChung.resx">
+      <DependentUpon>UCGioiThieuChung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\View_Layer_QLTTTruong\UCHeDaoTao.resx">
+      <DependentUpon>UCHeDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\View_Layer_QLTTTruong\UCHocPhiHocBong.resx">
+      <DependentUpon>UCHocPhiHocBong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\UCHome.resx">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\View_Layer_QLTTTruong\UCLienHe.resx">
+      <DependentUpon>UCLienHe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\View_Layer_QLTTTruong\UCNganhDaoTao.resx">
+      <DependentUpon>UCNganhDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\View_Layer_QLTTTruong\UCPhuongThucTS.resx">
+      <DependentUpon>UCPhuongThucTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\UCQLBangTinTuyenSinh.resx">
+      <DependentUpon>UCQLBangTinTuyenSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\UCQLThongTinTruong.resx">
+      <DependentUpon>UCQLThongTinTruong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\UCQuanLyDanhSachUngTuyen.resx">
+      <DependentUpon>UCQuanLyDanhSachUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\View_Layer_QLTTTruong\UCThongTinNhapHoc.resx">
+      <DependentUpon>UCThongTinNhapHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Layer\UCTimeLine.resx">
+      <DependentUpon>UCTimeLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuanLiTuyenSinh.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QuanLiTuyenSinh.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiTuyenSinh.dbml.layout">
+      <DependentUpon>QuanLiTuyenSinh.dbml</DependentUpon>
+    </None>
+    <None Include="Resource\icons8-magnifying-glass-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\hcmute-logo-7553D4CCA1-seeklogo.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\programmer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\notifications.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\LightMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\lamp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BS_Layer\Describe.txt" />
+    <Content Include="BD_Layer\Describe.txt" />
+    <None Include="Resource\edit.png" />
+    <None Include="Resource\bin.png" />
+    <None Include="Resource\iconexit.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

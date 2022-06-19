@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TuyenSinh" Class="QuanLiTuyenSinhDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=TuyenSinh;Integrated Security=True" SettingsObjectName="UI.Properties.Settings" SettingsPropertyName="TuyenSinhConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Admin" Member="Admins">
+    <Type Name="Admin">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChuongTrinhDaoTao" Member="ChuongTrinhDaoTaos">
+    <Type Name="ChuongTrinhDaoTao">
+      <Column Name="TenChuongTrinh" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NganhDaoTao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeDaoTao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PDFDaoTao" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DanhSachUngTuyen" Member="DanhSachUngTuyens">
+    <Type Name="DanhSachUngTuyen">
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaHoSo" Type="System.Int32" DbType="Int" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="MaNguyenVong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NganhUngTuyen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PhuongThuc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HeDaoTao" Member="HeDaoTaos">
+    <Type Name="HeDaoTao">
+      <Column Name="MaHeDaoTao" Type="System.String" DbType="NVarChar(20)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="TenHeDaoTao" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="GioiThieu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HocPhiHocBong" Member="HocPhiHocBongs">
+    <Type Name="HocPhiHocBong">
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" IsPrimaryKey="true" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LienHe" Member="LienHes">
+    <Type Name="LienHe">
+      <Column Name="DiaDiem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="Fanpage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhongBanLienHe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VanPhong" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhuongThucXetTuyen" Member="PhuongThucXetTuyens">
+    <Type Name="PhuongThucXetTuyen">
+      <Column Name="TenPhuongThuc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaPhuongThuc" Type="System.String" DbType="NVarChar(50)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="HeDaoTao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ThoiGianBatDau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThoiGianKetThuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhuongThucCha" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TimeLine" Member="TimeLines">
+    <Type Name="TimeLine">
+      <Column Name="TenSuKien" Type="System.String" DbType="NVarChar(20)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="ThoiGianBatDau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThoiGianKetThuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HeDaoTao" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TinTuyenSinh" Member="TinTuyenSinhs">
+    <Type Name="TinTuyenSinh">
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(20)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeDaoTao" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinChung" Member="ThongTinChungs">
+    <Type Name="ThongTinChung">
+      <Column Name="GioiThieuTruong" Type="System.String" DbType="NVarChar(MAX)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="SoGiaoSu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoPhoGiaoSu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoThacSiTienSi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoNganhDaoTaoTienSi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoNganhDaoTaoThacSi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoNganhDaoTaoCuNhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VideoGioiThieu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinChuyenNganh" Member="ThongTinChuyenNganhs">
+    <Type Name="ThongTinChuyenNganh">
+      <Column Name="MaNganh" Type="System.String" DbType="NVarChar(50)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="TenNganh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoaiChuongTrinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Khoa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChiTieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HocPhi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MoTaNganh" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinKhoa" Member="ThongTinKhoas">
+    <Type Name="ThongTinKhoa">
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiThieu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinNguoiDung" Member="ThongTinNguoiDungs">
+    <Type Name="ThongTinNguoiDung">
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(20)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="LoaiNguoiDung" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinNhapHoc" Member="ThongTinNhapHocs">
+    <Type Name="ThongTinNhapHoc">
+      <Column Name="NoiDungNhapHoc" Type="System.String" DbType="NVarChar(50)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="BuocSo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinVanBan" Member="ThongTinVanBans">
+    <Type Name="ThongTinVanBan">
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(50)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
