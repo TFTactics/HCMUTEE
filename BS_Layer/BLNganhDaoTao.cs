@@ -9,7 +9,7 @@ namespace UI.BS_Layer
 {
     internal class BLNganhDaoTao
     {
-        public Table<ThongTinChuyenNganh> LayThongTin()
+      /*  public Table<ThongTinChuyenNganh> LayThongTin()
         {
             DataSet ds = new DataSet();
             QuanLiTuyenSinhDataContext qlTS = new QuanLiTuyenSinhDataContext();
@@ -61,7 +61,7 @@ namespace UI.BS_Layer
             }
             return true;
         }
-
+*/
         DBMain db = null;
         public BLNganhDaoTao()
         {
